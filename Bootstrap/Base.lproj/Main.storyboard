@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -107,15 +108,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e5k-g0-f1P">
                                         <rect key="frame" x="0.0" y="122" width="366" height="64"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ0-Bd-3hy">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="64"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="App Enabler" cornerStyle="large"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ0-Bd-3hy">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="64"/>
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="top" title="App Enabler" imagePadding="4" cornerStyle="large">
+                                                    <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="default"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="appenabler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRE-YA-IhT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="a00-Is-meU">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="64"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="a00-Is-meU">
+                                                <rect key="frame" x="183" y="0.0" width="0.0" height="64"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Bootstrapped"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Bootstrapped" cornerStyle="large"/>
@@ -123,10 +126,12 @@
                                                     <action selector="bootstrap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4t4-gT-m0w"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="LQX-IC-Eof">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="64"/>
-                                                <color key="tintColor" systemColor="systemRedColor"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Uninstall" cornerStyle="large"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQX-IC-Eof">
+                                                <rect key="frame" x="195" y="0.0" width="171" height="64"/>
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="top" title="Uninstall" imagePadding="4" cornerStyle="large">
+                                                    <imageReference key="image" image="trash" catalog="system" symbolScale="default"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="unbootstrap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGa-od-jOL"/>
                                                 </connections>
@@ -173,6 +178,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.5690000057220459" blue="0.57499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

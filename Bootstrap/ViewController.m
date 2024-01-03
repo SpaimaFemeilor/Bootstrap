@@ -65,7 +65,7 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.respringBtn.enabled = YES;
         self.appEnablerBtn.enabled = YES;
         self.rebuildappsBtn.enabled = YES;
-        self.uninstallBtn.enabled = NO;
+        self.uninstallBtn.enabled = YES;
 
         self.bootstraBtn.hidden = YES;
         self.appEnablerBtn.hidden = NO;
@@ -79,7 +79,7 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.respringBtn.enabled = NO;
         self.appEnablerBtn.enabled = NO;
         self.rebuildappsBtn.enabled = NO;
-        self.uninstallBtn.enabled = NO;
+        self.uninstallBtn.enabled = YES;
 
         self.bootstraBtn.hidden = NO;
         self.appEnablerBtn.hidden = YES;
