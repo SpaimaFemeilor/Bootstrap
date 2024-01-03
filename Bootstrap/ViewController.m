@@ -19,7 +19,6 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *logView;
 @property (weak, nonatomic) IBOutlet UIButton *bootstraBtn;
-@property (weak, nonatomic) IBOutlet UIButton *unbootstrapBtn;
 @property (weak, nonatomic) IBOutlet UISwitch *opensshState;
 @property (weak, nonatomic) IBOutlet UIButton *appEnablerBtn;
 @property (weak, nonatomic) IBOutlet UIButton *respringBtn;
@@ -69,7 +68,7 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.uninstallBtn.enabled = NO;
 
         self.bootstraBtn.hidden = YES;
-        self.rebuildappsBtn.hidden = NO;
+        self.appEnablerBtn.hidden = NO;
         self.uninstallBtn.hidden = NO;
     }
     else if (isBootstrapInstalled())
@@ -80,9 +79,10 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.respringBtn.enabled = NO;
         self.appEnablerBtn.enabled = NO;
         self.rebuildappsBtn.enabled = NO;
+        self.uninstallBtn.enabled = NO;
 
         self.bootstraBtn.hidden = NO;
-        self.rebuildappsBtn.hidden = YES;
+        self.appEnablerBtn.hidden = YES;
         self.uninstallBtn.hidden = NO;
     }
     else if (NSProcessInfo.processInfo.operatingSystemVersion.majorVersion >= 15)
@@ -93,6 +93,7 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.respringBtn.enabled = NO;
         self.appEnablerBtn.enabled = NO;
         self.rebuildappsBtn.enabled = NO;
+        self.uninstallBtn.enabled = NO;
 
         self.bootstraBtn.hidden = NO;
         self.appEnablerBtn.hidden = YES;
@@ -104,6 +105,7 @@ OSStatus SecCodeCopySigningInformation(SecStaticCodeRef code, SecCSFlags flags, 
         self.respringBtn.enabled = NO;
         self.appEnablerBtn.enabled = NO;
         self.rebuildappsBtn.enabled = NO;
+        self.uninstallBtn.enabled = NO;
 
         self.bootstraBtn.hidden = NO;
         self.appEnablerBtn.hidden = YES;
