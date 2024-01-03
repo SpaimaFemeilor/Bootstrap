@@ -110,7 +110,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ0-Bd-3hy">
                                                 <rect key="frame" x="0.0" y="0.0" width="171" height="64"/>
-                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="top" title="App Enabler" imagePadding="4" cornerStyle="large">
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="top" title="Tweak Enabler" imagePadding="4" cornerStyle="large">
                                                     <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="default"/>
                                                 </buttonConfiguration>
                                                 <connections>
