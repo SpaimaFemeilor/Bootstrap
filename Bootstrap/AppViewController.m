@@ -249,7 +249,7 @@ NSArray* unsupportedBundleIDs = @[
         }
         
         if(status != 0) {
-            [AppDelegate showMesage:[NSString stringWithFormat:@"%@\n\nstderr:\n%@",log,err] title:[NSString stringWithFormat:@"code(%d)",status]];
+            [AppDelegate showMesage:[NSString stringWithFormat:@"%@\n\nstderr:\n%@",log,err] title:[NSString stringWithFormat:@"code (%d)",status]];
         }
         
         killAllForApp(app.bundleURL.path.UTF8String);
